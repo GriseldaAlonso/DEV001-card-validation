@@ -4,11 +4,127 @@
     <meta charset="utf-8">
     <title>Tarjeta de crédito válida</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+
   </head>
   <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
+   <header>
+   </header> 
+   <main class="main-container">
+    <section class="main-container__background-section">
+     <div class="main-container__btns">
+        <button class="btns">Inicio</button>
+        <button class="btns">Tienda</button>
+        <button class="btns">Contactanos</button>
+        <button class="btns">Blog</button>
+        <button class="btns-shoppingCart">
+          <img class="btnIcon" src="./carrito-de-compras.png">
+          Carrito</button>
+      </div>
+     <div class="flexbox">
+      <div class="card" name="card" id="card">
+       <div class="logo-visa"><img class="visa" src="./logoVisa.png" alt="logo-visa"></div>
+       <div class="logo-mastercard"><img class="mastercard" src="./mastercard-logo.png" alt="logo-mastercard"></div>
+       <img class="card__chip" src="./pngegg.png" alt="card chip">
+       <p class="cardNumView" name="cardNumView" id="cardNumView">0000 0000 0000 0000</p>
+       <div class="details">
+       <p class="details__name" name="cardName" id="cardName">Nombre del titular</p>
+        <div class="details__expDate"> 
+         <p class="expMonth" name="expMonth" id="expMonth">00</p>
+         <p name="slash" id="slash">/</p>
+         <p class="expYear" name="expYear" id="expYear">00</p>
+        </div>
+       </div>
+      </div>
+      <div class="cardBack" name="cardBack" id="cardBack">
+       <p class="cvvView" name="cvvView" id="cvvView">000</p>
+      </div>
+     </div> 
+    </section>
+   <section class="main-container__form-section">
+    <form class="form" id="cardForm">
+     <p class="form-title" name="form-title">Para continuar con tu compra agrega la forma de pago</p>
+      <div class="form-group">
+       <label for="inputNumber">Ingresa los 16 digitos de tu tarjeta</label>
+       <input class="form" type="text" name="inputNumber" id="inputNumber" placeholder="Número de tarjeta" maxlength="19">
+       <div class="form__cardNumber--error error"></div>
+      </div>
+      <div class="form-group">
+       <label for="cardHolder">Ingresa el nombre del titular de la tarjeta</label>
+       <input class="form__cardHolder" type="text" name="cardHolder" id="cardHolder" placeholder="Nombre completo">
+       <div class="form__cardHolder--error error"></div>
+      </div>
+      <div class="flexbox">
+        <div class="form-group__exp">
+          <div class="flexbox__bottom">
+           <div class="form-group__exp-select">
+            <label for="selectMonth">Fecha de Exp.</label>
+             <select name="month" id="selectMonth">
+               <option disabled selected>Mes</option>
+               <option value="01">Enero</option>
+               <option value="02">Febrero</option>
+               <option value="03">Marzo</option>
+               <option value="04">Abril</option>
+               <option value="05">Mayo</option>
+               <option value="06">Junio</option>
+               <option value="07">Julio</option>
+               <option value="08">Agosto</option>
+               <option value="09">Septiembre</option>
+               <option value="10">Octubre</option>
+               <option value="11">Noviembre</option>
+               <option value="12">Diciembre</option>
+             </select>
+           </div>
+           <div class="form-group__exp-select">
+            <label for="selectYear">(MM/AA)</label>
+             <select name="year" id="selectYear">
+               <option disabled selected>Año</option>
+               <option value="22"> 2022</option>
+               <option value="23"> 2023</option>
+               <option value="24"> 2024</option>
+               <option value="25"> 2025</option>
+               <option value="26"> 2026</option>
+               <option value="27"> 2027</option>
+               <option value="28"> 2028</option>
+               <option value="29"> 2029</option>
+             </select>
+           </div>
+           <div class="form-group__exp-select">
+             <label for="cvvNumber">CVV</label>
+             <input class="form" type="text" name="cvvNumber" id="cvvNumber" placeholder="CVV" maxlength="3">
+           </div>
+           <div class="form-group__error-container">
+            <div class="form__exp-select__mm--error error"></div>
+            <div class="form__exp-select__yy--error error"></div>
+            <div class="form__cvvNumber--error error"></div>
+           </div>
+         </div> 
+        </div>
+       </div>
+       <button class="validate" name="validate" id="validate">Agregar</button>
+     </form>
+    </section>
+           <!-- Formulario terminado - EndPage -->
+    <section class="thanks-section" id = "thanks">
+       <img class="thanks-section__image" src="./checkGreen.png" alt="complete icon">
+       <h1 class="thanks-section__title">¡Gracias!</h1>
+       <p class="thanks-section__text">Se agrego su forma de pago</p>
+       <button class="thanks-section__btn">Continuar</button>
+    </section>
+    <section class="fail-section" id = "failSection">
+        <img class="fail-section__image" src="./Deletion_icon.svg.png" alt="error icon">
+        <h1 class="fail-section__title">Error</h1>
+        <p class="fail-section__text">El número de tarjeta no es válido</p>
+        <button class="fail-section__btn" name="back" id="back">Regresar</button>
+    </section>
+   </main>
+   <footer>
+     <div class="attribution">
+      Coded by <a href="#">Griselda Alonso</a>.
+     </div>
+   </footer>
     <script src="index.js" type="module"></script>
   </body>
 </html>
