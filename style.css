@@ -80,6 +80,13 @@ body{
     z-index: 1;
     letter-spacing: 2px;
 }
+.logo-container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 50px;
+    height: 35px;
+    margin-left: 200px;
+}
 .logo-visa{
     display: none;
 }
@@ -87,9 +94,8 @@ body{
     display: flex;
     width: 50px;
     height: 35px;
-    margin-left: 200px;
-    margin-top: -202px;
-    position: fixed;
+    margin-left: 0px;
+    margin-top: -10px;
 }
 .logo-mastercard{
     display: none;
@@ -98,20 +104,19 @@ body{
     display: flex;
     width: 50px;
     height: 35px;
-    margin-left: 200px;
-    margin-top: -202px;
-    position: fixed;
+    margin-left: 0px;
+    margin-top: -10px;
 }
 .card__chip {
     display: flex;
     width: 40px;
     height: 30px;
-    margin-top: 30px;
+    margin-top: 0px;
     position: absolute;
 
 }
 .cardNumView {
-    margin-top: 65px;
+    margin-top: 40px;
     margin-bottom: 10px;
     position: absolute;
 }
@@ -120,7 +125,8 @@ body{
     font-size: 0.7em;
     justify-content: space-between;
     text-transform: uppercase;
-    margin-top: 100px;
+    margin-top: 70px;
+    position: relative;
 }
 .details__expDate {
     display: flex;
